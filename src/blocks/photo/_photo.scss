@@ -1,0 +1,178 @@
+.photo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.instagram {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background-color: #3f729b;
+
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.info {
+    color: #f9f9f9;
+    padding: 120px;
+    font-family: "fira_sansbold", serif;
+
+    &--video {
+        @include shift-left(2);
+        @include shift-right(6);
+        background-color: #282b2f;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 24px;
+
+        &--green {
+            color: #2ebd59
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+
+        &--green {
+            color: #2ebd59
+        }
+    }
+
+    &__text {
+        font-family: 'Myriad Pro', sans-serif;
+        font-size: 36px;
+        margin-bottom: 40px;
+
+        &--video {
+            font-size: 14px;
+        }
+    }
+
+    &__link {
+        color: #f9f9f9;
+        text-transform: uppercase;
+        border: #f9f9f9 solid 2px;
+        border-radius: 50px;
+        padding: 20px 25px;
+        font-size: 18px;
+        letter-spacing: 4px;
+
+        &--green {
+            color: #2ebd59;
+            border-color: #2ebd59;
+        }
+    }
+}
+
+.video {
+    @include container-full();
+    background-image: url(../../img/photo6.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #282b2f;
+    height: 100vh;
+}
+
+.music {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+    .spotify {
+        background-color: #2ebd59;
+    }
+
+    .itunes {
+        background-color: #282b2f;
+    }
+}
+
+@media (max-width: 1510px) {
+    .info {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .info {
+        &--video {
+            @include shift-left(5);
+            @include shift-right(2);
+        }
+
+        &__text {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 972px) {
+
+    .instagram {
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        &__item {
+            &--last {
+                display: none;
+            }
+
+        }
+    }
+
+    .info {
+        &__text {
+            font-size: 18px;
+        }
+
+        &--video {
+            @include shift-left(0);
+            @include shift-right(2);
+        }
+    }
+
+    .music {
+        display: block;
+    }
+}
+
+@media (max-width: 731px) {
+    .instagram {
+        display: block;
+
+        &__item {
+
+            &--second {
+                display: none;
+            }
+        }
+
+    }
+
+    .info {
+        display: block;
+        &--video {
+            @include shift-left(0);
+            @include shift-right(0);
+        }
+    }
+
+    .video {
+        background-image: none;
+        height: auto;
+    }
+}

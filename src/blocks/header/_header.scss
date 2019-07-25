@@ -1,0 +1,120 @@
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  
+  width: 100%;
+  
+  .header {
+    @include container();
+    padding-top: 90px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    
+    &-wrapper {
+      background-image: url(../../img/bg-hero.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+
+
+
+    &__text {
+      font-family: "fira_sans_lightregular";
+      font-size: 30px;
+    }
+    
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 200px;
+
+      .topnav {
+        display: flex;
+
+        #myLinks {
+          display: none;
+          
+          a {
+            line-height: 35px;
+            margin-right: 20px;
+            color: #000;
+            transition-property: color;
+            transition-duration: 0.5s;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        .icon {
+          color: #000;
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 12px;
+          transition-property: color;
+          transition-duration: 0.5s;
+
+          .d-none {
+            display: none;
+          }
+
+          i {
+            display: block;
+            font-size: 35px;
+            margin-bottom: 10px;
+          }
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      .logo {
+        display: block;
+        width: 80px;
+        height: 80px;
+        font-family: "fira_sans_extraboldregular", serif;
+        background-color: #000;
+        font-size: 60px;
+        color: #fff;
+        text-align: center;
+        font-weight: 900;
+        line-height: 80px;
+        transition-property: color background-color;
+        transition-duration: 0.5s;
+
+        &:hover {
+          color: #000;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.main-title, .title {
+  font-family: "fira_sans_lightregular";
+  font-size: 72px;
+}
+
+@media (max-width: 640px) {
+  .main-title, .title {
+    font-size: 36px;
+  }
+
+  .wrapper{
+    .header {  
+      &__text {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+

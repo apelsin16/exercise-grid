@@ -1,0 +1,75 @@
+.about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    &__title {
+        font-family: "fira_sansbold";
+        font-size: 24px;
+    }
+
+    &__text {
+        font-family: "fira_sans_lightregular";
+        font-size: 36px;
+
+    }
+
+    &-item {
+        
+        color: #666666;
+
+        &__left {
+            display: block;
+            background-image: url(../../img/bg-about.png);
+            background-size: cover;
+        }
+
+        &__right {
+            @include shift-right(3);
+            padding: 100px 50px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        &-item {
+            &__left {
+                background-position: center center;
+            }
+            &__right {
+                @include shift-right(0);
+                padding: 100px 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .about {
+        display: block;
+        &__text {
+            font-family: "fira_sans_lightregular";
+            font-size: 24px;
+    
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        
+        &-item {
+        
+            color: #666666;
+    
+            &__left {
+                display: none;
+            }
+    
+            &__right {
+                @include shift-right(0);
+                padding: 30px;
+            }
+        }
+    }
+}
