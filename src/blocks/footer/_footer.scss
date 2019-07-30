@@ -64,3 +64,9 @@ $pColor: #919191;
 .amazing {
     grid-row: 1/3;
 }
+
+@media (max-width: 800px) {
+    .footer__wrap {
+        display: block;
+    }
+}

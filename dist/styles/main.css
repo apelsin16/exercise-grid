@@ -620,7 +620,9 @@ a {
     display: block; }
     .about__text {
       font-family: "fira_sans_lightregular";
-      font-size: 24px; } }
+      font-size: 24px; }
+  .footer__wrap {
+    display: block; } }
   @media (max-width: 731px) {
   .instagram {
     display: block; }
